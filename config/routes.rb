@@ -52,6 +52,11 @@ IlonaKennedy::Application.routes.draw do
   #     end
   #   end
 
+  # reroute to custom routes
+
+  get 'recent-works', :to => 'works#index'
+  # get 'past-works', :to => 'works#past-works'
+
   # Sample resource route within a namespace:
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
@@ -61,7 +66,7 @@ IlonaKennedy::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'works#index'
 
   # See how all your routes lay out with "rake routes"
 

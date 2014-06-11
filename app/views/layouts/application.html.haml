@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title Ilona Kennedy
+    = stylesheet_link_tag    "application", :media => "all"
+    %link{:href => "http://fonts.googleapis.com/css?family=Poiret+One", :rel => "stylesheet", :type => "text/css"}
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    %nav.cf
+      %ul
+        %li
+          = link_to "Recent Works", "/recent-works"
+        %li
+          = link_to "Past Works", "/past-works"
+        %li
+          = link_to "Artist Bio", "/artist-bio"
+        %li
+          = link_to "Contact", "/contact"
+      .title Ilona Kennedy
+
+    = yield
+

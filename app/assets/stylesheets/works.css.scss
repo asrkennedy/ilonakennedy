@@ -1,3 +1,128 @@
 // Place all the styles related to the Works controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+body, html {
+  font-family: 'Poiret One', cursive;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #4F5154;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.title {
+  float: right;
+  margin: 1em;
+}
+
+nav ul {
+  display: inline-block;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  border-right: 1px solid #4F5154;
+  padding-right: 20px;
+}
+
+.recent-works {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: table;
+  margin-top: 50px;
+}
+
+.work_row td {
+  display: block;
+  padding: 0;
+}
+
+.work_image_wrapper {
+  height: 640px;
+  overflow: hidden;
+}
+
+.work_image {
+  width: 100%;
+  margin: auto;
+}
+
+.work_row {
+  text-align: center;
+  display: block;
+  position: relative;
+}
+
+// .info_bar:before {
+//    content: '';
+//   display: inline-block;
+//   height: 100%;
+//   vertical-align: middle;
+//   margin-right: -0.25em; /* Adjusts for spacing */
+// }
+
+.info_bar {
+  position: absolute;
+  top: 310px;
+  width: 100%;
+  display: table !important;
+}
+
+.info_bar a:hover,
+.info_bar a:focus {
+  background-color: rgba(255,255,255,0.4);
+  color: #FFFFFF;
+ }
+
+.info_bar a {
+  height: 330px;
+  color: #F7F5F2;
+  background-color: rgba(255,255,255,0.2);
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  font-size: 2em;
+   -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+.down_arrow, .up_arrow {
+  width: 40px;
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.up_arrow {
+  top: 40px;
+  bottom: auto;
+  transform:rotate(180deg);
+-ms-transform:rotate(180deg); /* IE 9 */
+-webkit-transform:rotate(180deg); /* Opera, Chrome, and Safari */
+}
