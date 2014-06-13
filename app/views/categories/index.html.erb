@@ -1,23 +1,26 @@
-<h1>Listing categories</h1>
+<div class="past-works cf">
+    <% @collections.each do |c| %>
+      <div class="collection cf">
+          <div class="collection_name">
+            <%= c.name %>
+          </div>
+          <div class="collection_arrows left">
+          <%= image_tag "left-arrow-icon.png", :class=>"left_arrow" %>
+        </div>
+          <div class="scrollable">
+            <div class="image_wrapper">
+              <% c.works.each do |w| %>
+                <% if w.is_recent == false %>
+                  <%= link_to image_tag(w.works_image.url, :class=>"past_work_image"), w %>
+                <% end %>
+              <% end %>
+          </div>
+        </div>
+        <div class="collection_arrows right">
+          <%= image_tag "right-arrow-icon.png", :class=>"right_arrow" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @categories.each do |category| %>
-  <tr>
-    <td><%= category.name %></td>
-    <td><%= link_to 'Show', category %></td>
-    <td><%= link_to 'Edit', edit_category_path(category) %></td>
-    <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Category', new_category_path %>

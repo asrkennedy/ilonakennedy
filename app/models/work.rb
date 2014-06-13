@@ -7,7 +7,7 @@ class Work < ActiveRecord::Base
 
   def is_recent
     if self.category.name == "Recent Works"
-        return true
+      return true
     else
       return false
     end

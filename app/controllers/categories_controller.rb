@@ -3,6 +3,8 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     @categories = Category.all
+    @works = Work.all
+    @collections = Collection.all
 
     respond_to do |format|
       format.html # index.html.erb

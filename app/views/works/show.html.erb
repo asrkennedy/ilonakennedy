@@ -1,32 +1,38 @@
 <p id="notice"><%= notice %></p>
+<div class="works_wrapper cf">
+  <div class="works_show">
+    <%= image_tag @work.works_image.url %>
+  </div>
 
-<p>
-  <b>Name:</b>
-  <%= @work.name %>
-</p>
+  <div class="works_description">
+    <p>
+      <b>Name:</b>
+      <%= @work.name %>
+    </p>
 
-<p>
-  <%= image_tag @work.works_image.url %>
-</p>
+    <p>
+      <b>Date:</b>
+      <%= @work.date %>
+    </p>
 
-<p>
-  <b>Date:</b>
-  <%= @work.date %>
-</p>
+    <p>
+      <b>Category:</b>
+      <%= @work.category.name %>
+    </p>
 
-<p>
-  <b>Category:</b>
-  <%= @work.category.name %>
-</p>
+    <p>
+      <b>Collection:</b>
+      <%= @work.collection.name %>
+    </p>
 
-<p>
-  <b>Collection:</b>
-  <%= @work.collection.name %>
-</p>
+    <p>
+      <b>Price:</b>
+      <%= @work.price %>
+    </p>
+  </div>
+</div>
 
-<p>
-  <b>Price:</b>
-  <%= @work.price %>
-</p>
+  <%= link_to 'Back', works_path, :class=>"back_button" %>
+  <%= link_to 'Purchase', works_path, :class=>"purchase_button" %>
 
-<%= link_to 'Back', works_path %>
+

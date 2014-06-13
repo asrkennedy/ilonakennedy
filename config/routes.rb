@@ -55,7 +55,7 @@ IlonaKennedy::Application.routes.draw do
   # reroute to custom routes
 
   get 'recent-works', :to => 'works#index'
-  # get 'past-works', :to => 'works#past-works'
+  get 'past-works', :to => 'categories#index'
 
   # Sample resource route within a namespace:
   #   namespace :admin do
