@@ -53,6 +53,15 @@ IlonaKennedy::Application.configure do
 
   # Enable threaded mode
   # config.threadsafe!
+  CarrierWave.configure do |config|
+    config.storage = :fog
+    config.fog_credentials = {
+      :provider               => 'AWS',
+      :aws_access_key_id      => ENV['AWS_ACCESS_KEY_ID'],
+      :aws_secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+    config.fog_directory  = 'uniFi'
+  end
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found)
