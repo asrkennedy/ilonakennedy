@@ -4,4 +4,8 @@ class PagesController < ApplicationController
     render
   end
 
+  def contact
+    render
+  end
+
 end

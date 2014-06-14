@@ -276,7 +276,7 @@ nav ul li {
   right: 120px;
 }
 
-// COLLECTION
+// COLLECTIONS
 
 .collection_wrapper {
   max-width: 940px;
@@ -295,6 +295,35 @@ nav ul li {
 
 .collection_works_image {
     margin-top: 40px;
+}
+
+// BIO
+
+.bio_wrapper {
+  max-width: 940px;
+  margin: auto;
+}
+
+.bio_image {
+  width: 200px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.biography {
+  float: right;
+  width: 600px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.signature {
+  float: right;
+}
+
+.contact {
+  display: inline-block;
+  width: 100px;
 }
 
 

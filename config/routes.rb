@@ -53,6 +53,7 @@ IlonaKennedy::Application.routes.draw do
   get 'recent-works', :to => 'works#index'
   get 'past-works', :to => 'categories#index'
   get '/bio', to: "pages#bio", as: :bio
+  get '/contact', to: "pages#contact", as: :contact
 
   # Sample resource route within a namespace:
   #   namespace :admin do
