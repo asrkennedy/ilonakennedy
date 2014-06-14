@@ -20,7 +20,7 @@
 body, html {
   font-family: 'Poiret One', cursive;
   margin: 0;
-  height: 100%;
+  margin-top: 30px;
 }
 
 a {
@@ -31,7 +31,7 @@ a {
 nav {
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   background-color: #ffffff;
   width: 100%;
   min-width: 700px;
@@ -56,10 +56,6 @@ nav ul li {
 
 .recent-works, .past-works {
   width: 100%;
-  border-spacing: 0;
-  border-collapse: collapse;
-  display: table;
-  margin-top: 50px;
 }
 
 .work_row td {
@@ -133,11 +129,12 @@ nav ul li {
 
 .collection {
   margin: 20px;
-  background-color: #C9D6D6;
-  padding: 20px;
-  height: 250px;
+  background-color: #999999;
+  // padding: 20px;
+  height: 200px;
   overflow: hidden;
   min-width: 1116px;
+  position: relative;
 }
 
 .collection:before {
@@ -156,30 +153,40 @@ nav ul li {
 }
 
 .collection_name {
-
-  min-width: 200px;
+  width: 100%;
+  background: rgba(255,255,255,0.6);
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  text-align: center;
+  left: 0;
 }
 
 .collection_arrows {
   max-width: 40px;
   padding: 0;
   padding-top: 30px;
+  position: absolute;
+  z-index: 1;
 }
 
 .collection_arrows.right {
-    margin-left: 20px;
+    // margin-left: 20px;
+    right: 10px;
 }
 
 .collection_arrows.left {
-  margin-right: 10px;
+  // margin-right: 10px;
+  left: 10px;
   opacity: 0;
   visibility: hidden;
 }
 
 .scrollable {
-  width: 800px;
+  width: 1170px;
   min-width: 800px;
-  height: 250px;
+  height: 200px;
   display: inline-block;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -189,11 +196,16 @@ nav ul li {
 
 
 .image_wrapper {
-  width: 20000em;
+  // width: 20000em;
+  // display: block;
+  // float: left;
+  // bottom: 0;
+  // position: absolute;
   display: block;
   float: left;
   bottom: 0;
   position: absolute;
+  max-height: 200px;
 }
 
 // .past_work_image_hover {
@@ -207,9 +219,15 @@ nav ul li {
 // }
 
 .past_work_image {
-  width: 150px;
-  margin: 10px;
-  display: inline-block;
+  // width: 150px;
+  // margin: 10px;
+  // display: inline-block;
+  width: 300px;
+  float: left;
+}
+
+.image_wrapper a {
+  float: left;
 }
 
 .works_wrapper {
@@ -256,6 +274,27 @@ nav ul li {
 
 .purchase_button {
   right: 120px;
+}
+
+// COLLECTION
+
+.collection_wrapper {
+  max-width: 940px;
+  margin: auto;
+}
+
+.collection_work_wrappers {
+  display: inline-block;
+}
+
+.collection_works_image,
+.collection_works_name {
+  width: 280px;
+  margin: 10px;
+}
+
+.collection_works_image {
+    margin-top: 40px;
 }
 
 

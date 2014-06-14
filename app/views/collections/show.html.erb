@@ -1,19 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @collection.name %>
-</p>
+<div class="collection_wrapper">
+  <p>
+    <b>Collection:</b>
+    <%= @collection.name %>
+  </p>
 
-<p>
-  <b>Date:</b>
-  <%= @collection.date %>
-</p>
+  <p>
+      <%= @collection.date %>
+  </p>
 
-<p>
-  <b>Description:</b>
-  <%= @collection.description %>
-</p>
+  <p>
+    <%= @collection.description %>
+  </p>
+
+   <% @collection.works.each do |w| %>
+   <div class="collection_work_wrappers">
+      <%= link_to image_tag(w.works_image.url, :class=>"collection_works_image"), w %>
+      <p class="collection_works_name">
+        <%= link_to w.name, w %>
+      </p>
+    </div>
+   <% end %>
+
+ </div>
 
 
 <%= link_to 'Edit', edit_collection_path(@collection) %> |

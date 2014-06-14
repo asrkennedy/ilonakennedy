@@ -4,12 +4,12 @@ $(function(){
 
   function scrollToLeft(){
     var scrollable = $($(this).parent().siblings('.scrollable')[0])
-    scrollable.animate({scrollLeft: '-=120'}, 800, 'linear', scrollToLeft);
+    scrollable.animate({scrollLeft: '-=330'}, 800, 'linear', scrollToLeft);
   }
 
   function scrollToRight(){
     var rightArrowWrapper = $(this).parent();
-    $(rightArrowWrapper.siblings('.scrollable')[0]).animate({scrollLeft: '+=120'}, 800, 'linear', scrollToRight);
+    $(rightArrowWrapper.siblings('.scrollable')[0]).animate({scrollLeft: '+=330'}, 800, 'linear', scrollToRight);
     rightArrowWrapper.siblings('.collection_arrows.left').css('visibility', 'visible').animate({opacity: '1'}, 500);
   }
 
@@ -29,7 +29,7 @@ $(function(){
 
   $('.collection').each(function(i, e) {
     var imageWrapper = $(e).children('.scrollable').children('.image_wrapper')
-    var imageWidth = imageWrapper.children().width() + 30
+    var imageWidth = imageWrapper.children().width()
     var numImages =  imageWrapper.children().length
     var imageWrapperWidth = imageWidth*numImages
 
@@ -42,8 +42,8 @@ $(function(){
       }
   });
 
-  $(".right_arrow").hover(scrollToRight, stop);
-  $(".left_arrow").hover(scrollToLeft, stop);
+  $(".right_arrow").click(scrollToRight);
+  $(".left_arrow").click(scrollToLeft);
 
 
   // var hoverHeight = $('.past_work_image_hover').siblings().height()

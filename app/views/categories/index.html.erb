@@ -2,7 +2,7 @@
     <% @collections.each do |c| %>
       <div class="collection cf">
           <div class="collection_name">
-            <%= c.name %>
+            <%= link_to c.name, c %>
           </div>
           <div class="collection_arrows left">
           <%= image_tag "left-arrow-icon.png", :class=>"left_arrow" %>
