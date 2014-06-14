@@ -60,8 +60,10 @@ IlonaKennedy::Application.configure do
       :aws_access_key_id      => ENV['AWS_ACCESS_KEY_ID'],
       :aws_secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY']
     }
-    config.fog_directory  = 'uniFi'
+    config.fog_directory  = 'ilonakennedy'
   end
+
+  config.assets.initialize_on_precompile = false
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found)
