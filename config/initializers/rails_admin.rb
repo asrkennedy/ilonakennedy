@@ -24,7 +24,7 @@ RailsAdmin.config do |config|
   # config.compact_show_view = false
 
   # Number of default rows per-page:
-  # config.default_items_per_page = 20
+  config.default_items_per_page = 100
 
   # Exclude specific models (keep the others):
   # config.excluded_models = []
@@ -54,6 +54,19 @@ RailsAdmin.config do |config|
         field :price
         field :works_image
         sort_by :collection
+        # field :position do
+        #   sort_reverse false
+        # end
+      end
+    end
+
+    config.model Collection do
+      list do
+        field :name
+        field :date
+        field :description
+        field :works
+        sort_by :name
         # field :position do
         #   sort_reverse false
         # end
