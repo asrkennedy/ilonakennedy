@@ -48,6 +48,10 @@ RailsAdmin.config do |config|
 
   config.model Work do
       list do
+        field :name
+        field :category_id
+        field :collection_id
+        field :price
         sort_by :collection_id
         # field :position do
         #   sort_reverse false
