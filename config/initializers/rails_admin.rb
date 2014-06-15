@@ -49,8 +49,8 @@ RailsAdmin.config do |config|
   config.model Work do
       list do
         field :name
-        field :category_id
-        field :collection_id
+        field :category
+        field :collection
         field :price
         sort_by :collection_id
         # field :position do
