@@ -52,7 +52,8 @@ RailsAdmin.config do |config|
         field :category
         field :collection
         field :price
-        sort_by :collection_id
+        field :works_image
+        sort_by :collection
         # field :position do
         #   sort_reverse false
         # end
