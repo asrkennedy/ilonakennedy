@@ -12,6 +12,7 @@ gem 'fog', '~> 1.3.1'
 gem 'rails_12factor', group: :production
 gem 'ancestry'
 gem 'rails_admin_nestable'
+gem 'debugger'
 
 
 # Gems used only for assets and not required

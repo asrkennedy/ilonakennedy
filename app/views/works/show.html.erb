@@ -12,6 +12,9 @@
     <p>
       <%= @work.date %>
     </p>
+    <p>
+      <%= @work.category.name %>
+    </p>
 
     <p> from the
       <%= link_to @work.collection.name, collection_path(@work.collection) %>
@@ -24,7 +27,19 @@
   </div>
 </div>
 
-  <%= link_to 'Back', works_path, :class=>"back_button" %>
+<% if @work.get_next_work %>
+  <%= link_to 'Next', @work.get_next_work %>
+<% end %>
+
+<% if @work.get_prev_work %>
+  <%= link_to 'Previous', @work.get_prev_work %>
+<% end %>
+
+<% if @work.category.name == "Past Works" %>
+  <%= link_to 'Back', '/past-works', :class=>"back_button" %>
+<% else %>
+  <%= link_to 'Back',  works_path, :class=>"back_button" %>
+<% end %>
   <%= link_to 'Purchase', works_path, :class=>"purchase_button" %>
 
 

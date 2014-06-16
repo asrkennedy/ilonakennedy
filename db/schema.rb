@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140616141340) do
+ActiveRecord::Schema.define(:version => 20140616172147) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(:version => 20140616141340) do
     t.integer  "collection_id"
     t.string   "ancestry"
     t.integer  "position"
+    t.string   "dimensions"
   end
 
   add_index "works", ["ancestry"], :name => "index_works_on_ancestry"

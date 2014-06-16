@@ -15,4 +15,26 @@ class Work < ActiveRecord::Base
     end
   end
 
+  def get_next_work
+    current_position = self.position
+    current_category = self.category.name
+    next_work = Work.where("position > ?", current_position).order("position ASC").first
+    if next_work.category.name == current_category
+      return next_work
+    else
+      return false
+    end
+  end
+
+    def get_prev_work
+    current_position = self.position
+    current_category = self.category.name
+    prev_work = Work.where("position < ?", current_position).order("position ASC").last
+    if prev_work.category.name == current_category
+      return prev_work
+    else
+      return false
+    end
+  end
+
 end
