@@ -10,6 +10,13 @@ class WorksController < ApplicationController
     end
   end
 
+  def sort
+    params[:works].each_with_index do [id, index]
+      Work.update_all(['position=?', index+1], ['id=?', id])
+    end
+    render :nothing => true
+  end
+
   # GET /works/1
   # GET /works/1.json
   def show

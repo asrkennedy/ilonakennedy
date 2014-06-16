@@ -14,5 +14,14 @@
   <% end %>
 <% end %>
 
+<ul id="works">
+  <% for work in @works %>
+    <% content_tag_for :li, work do %>
+      <span class="handle">[drag]</span>
+      <%= link_to h(work.name), work %>
+    <% end %>
+  <% end %>
+</ul>
+<%= sortable_element("works", :url => sort_works_path, :hanfle => "handle") %>
 </div>
 
