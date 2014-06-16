@@ -69,7 +69,7 @@ RailsAdmin.config do |config|
     nestable_tree({
       position_field: :position,
       max-depth: 1
-      })
+      }),
       list do
         field :name
         field :category
