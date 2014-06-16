@@ -70,4 +70,6 @@ ActiveRecord::Schema.define(:version => 20140616123849) do
     t.string   "ancestry"
   end
 
+  add_index "works", ["ancestry"], :name => "index_works_on_ancestry"
+
 end
