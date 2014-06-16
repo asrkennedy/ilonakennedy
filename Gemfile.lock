@@ -140,7 +140,9 @@ GEM
       remotipart (~> 1.0)
       safe_yaml (~> 0.6)
       sass-rails (~> 3.1)
-    rails_admin_nested_set (0.3.6)
+    rails_admin_nestable (0.0.9)
+      rails (~> 3.2)
+      rails_admin
     rails_serve_static_assets (0.0.2)
     rails_stdout_logging (0.0.3)
     railties (3.2.17)
@@ -195,6 +197,6 @@ DEPENDENCIES
   rails (= 3.2.17)
   rails_12factor
   rails_admin
-  rails_admin_nested_set
+  rails_admin_nestable
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
