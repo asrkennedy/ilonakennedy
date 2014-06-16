@@ -10,6 +10,7 @@ gem 'rails_admin'
 gem 'carrierwave'
 gem 'fog', '~> 1.3.1'
 gem 'rails_12factor', group: :production
+gem 'rails_admin_nested_set'
 
 
 # Gems used only for assets and not required
