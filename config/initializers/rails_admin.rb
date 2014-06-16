@@ -47,6 +47,7 @@ RailsAdmin.config do |config|
   #   - Models are reloaded at each request in development mode (when modified), which may smooth your RailsAdmin development workflow.
 
   config.model Work do
+    parent Collection
       list do
         field :name
         field :category
