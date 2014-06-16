@@ -13,11 +13,12 @@
       <%= @work.date %>
     </p>
 
-    <p>
-      <%= @work.collection.name %>
+    <p> from the
+      <%= link_to @work.collection.name, collection_path(@work.collection) %>
+      collection
     </p>
 
-    <p>$
+    <p>
       <%= @work.price %>
     </p>
   </div>
