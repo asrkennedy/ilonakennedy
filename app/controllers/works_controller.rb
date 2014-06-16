@@ -4,13 +4,6 @@ class WorksController < ApplicationController
   def index
     @works = Work.all
 
-    def sort
-      params[:works].each_with_index do [id, index]
-        Work.update_all(['position=?', index+1], ['id=?', id])
-      end
-      render :nothing => true
-    end
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @works }

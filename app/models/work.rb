@@ -6,8 +6,6 @@ class Work < ActiveRecord::Base
 
   mount_uploader :works_image, WorksImageUploader
 
-  acts_as_list
-
   def is_recent
     if self.category.name == "Recent Works"
       return true
