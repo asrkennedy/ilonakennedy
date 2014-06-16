@@ -96,6 +96,21 @@ RailsAdmin.config do |config|
       })
     end
 
+    config.model Category do
+      list do
+        field :name
+        sort_by :position
+      end
+      nestable_tree({
+        position_field: :position,
+        max_depth: 3
+        })
+    end
+
+    config.model User do
+      visible false
+    end
+
 
   # Now you probably need to tour the wiki a bit: https://github.com/sferik/rails_admin/wiki
   # Anyway, here is how RailsAdmin saw your application's models when you ran the initializer:
