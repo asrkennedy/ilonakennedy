@@ -3,7 +3,26 @@
 
 RailsAdmin.config do |config|
 
+# actions
+ config.actions do
+    # root actions
+    dashboard                     # mandatory
+    # collection actions
+    index                         # mandatory
+    new
+    export
+    history_index
+    bulk_delete
+    # member actions
+    show
+    edit
+    delete
+    history_show
+    show_in_app
 
+    # Add the nestable action for configured models
+    nestable
+  end
   ################  Global configuration  ################
 
   # Set the admin name here (optional second array element will appear in red). For example:
@@ -47,7 +66,10 @@ RailsAdmin.config do |config|
   #   - Models are reloaded at each request in development mode (when modified), which may smooth your RailsAdmin development workflow.
 
   config.model Work do
-    parent Collection
+    nestable_tree({
+      position_field: :position,
+      max-depth: 1
+      })
       list do
         field :name
         field :category

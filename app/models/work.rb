@@ -5,6 +5,7 @@ class Work < ActiveRecord::Base
   validates_presence_of :name, :price, :collection_id, :works_image, :category_id
 
   mount_uploader :works_image, WorksImageUploader
+  has_ancestry
 
   def is_recent
     if self.category.name == "Recent Works"
