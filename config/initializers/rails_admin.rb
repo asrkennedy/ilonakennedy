@@ -73,14 +73,6 @@ RailsAdmin.config do |config|
       end
     end
 
-    config.actions do
-
-      nested_set do
-        visible do
-          %w(Page).include? bindings[:work].work
-        end
-      end
-    end
 
   # Now you probably need to tour the wiki a bit: https://github.com/sferik/rails_admin/wiki
   # Anyway, here is how RailsAdmin saw your application's models when you ran the initializer:

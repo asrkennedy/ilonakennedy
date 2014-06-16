@@ -5,14 +5,6 @@ class Work < ActiveRecord::Base
   validates_presence_of :name, :price, :collection_id, :works_image, :category_id
 
   mount_uploader :works_image, WorksImageUploader
-  acts_as_nested_set
-
-  rails_admin do
-    nested_set({
-      max_depth: 1,
-      toggle_fields: [:enabled]
-      })
-  end
 
   def is_recent
     if self.category.name == "Recent Works"
