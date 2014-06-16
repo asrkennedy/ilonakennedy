@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140616123849) do
+ActiveRecord::Schema.define(:version => 20140616132259) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -25,7 +25,11 @@ ActiveRecord::Schema.define(:version => 20140616123849) do
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "ancestry"
+    t.integer  "position"
   end
+
+  add_index "collections", ["ancestry"], :name => "index_collections_on_ancestry"
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"
@@ -68,6 +72,7 @@ ActiveRecord::Schema.define(:version => 20140616123849) do
     t.string   "works_image"
     t.integer  "collection_id"
     t.string   "ancestry"
+    t.integer  "position"
   end
 
   add_index "works", ["ancestry"], :name => "index_works_on_ancestry"

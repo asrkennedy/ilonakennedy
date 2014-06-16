@@ -2,7 +2,7 @@ class CollectionsController < ApplicationController
   # GET /collections
   # GET /collections.json
   def index
-    @collections = Collection.all
+    @collections = Collection.all.
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,8 @@ class CollectionsController < ApplicationController
   # GET /collections/1
   # GET /collections/1.json
   def show
-    @collection = Collection.find(params[:id])
+    @collection = Collection.find(params[:id]).sort_by &:position
+    @collection_works = @collection.works.sort_by &:position
 
     respond_to do |format|
       format.html # show.html.erb

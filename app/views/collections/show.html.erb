@@ -14,7 +14,7 @@
     <%= @collection.description %>
   </p>
 
-   <% @collection.works.each do |w| %>
+   <% @collection_works.each do |w| %>
    <div class="collection_work_wrappers">
       <%= link_to image_tag(w.works_image.url, :class=>"collection_works_image"), w %>
       <p class="collection_works_name">
