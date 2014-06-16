@@ -6,27 +6,18 @@
 
   <div class="works_description">
     <p>
-      <b>Name:</b>
       <%= @work.name %>
     </p>
 
     <p>
-      <b>Date:</b>
       <%= @work.date %>
     </p>
 
     <p>
-      <b>Category:</b>
-      <%= @work.category.name %>
+      <%= link_to @work.collection.name, @work.collection.url %>
     </p>
 
-    <p>
-      <b>Collection:</b>
-      <%= @work.collection.name %>
-    </p>
-
-    <p>
-      <b>Price:</b>
+    <p>$
       <%= @work.price %>
     </p>
   </div>
