@@ -70,17 +70,6 @@ RailsAdmin.config do |config|
       position_field: :position,
       max_depth: 1
       })
-      list do
-        field :name
-        field :category
-        field :collection
-        field :price
-        field :works_image
-        sort_by :collection
-        # field :position do
-        #   sort_reverse false
-        # end
-      end
     end
 
     config.model Collection do
