@@ -4,7 +4,9 @@ $(function(){
   var collectionWidth = $('.collection.cf').width();
 
    function scrollBottom(){
-   return $('.work_image_wrapper').scrollTop() + $('.work_image_wrapper').height();
+    // accounts for the fixed nav 57px at top
+    var amountScrolled = $('.work_image_wrapper').scrollTop() + $(window).height() -57;
+   return amountScrolled
    }
 
   function scrollToLeft(){
@@ -21,6 +23,10 @@ $(function(){
   function stop(){
     $('.scrollable').stop();
   }
+
+   // accounts for the fixed nav 57px at top
+  $('.work_image_wrapper').css('max-height', $(window).height()-57)
+
 
   $('.down_arrow').on('click',function(){
      $('html, body').animate({scrollTop: $(window).scrollTop() + scrollBottom()}, 800);
@@ -51,10 +57,6 @@ $(function(){
 
   $(".right_arrow").click(scrollToRight);
   $(".left_arrow").click(scrollToLeft);
-
-
-  // var hoverHeight = $('.past_work_image_hover').siblings().height()
-  // $('.past_work_image_hover').height(hoverHeight);
 
 
 });

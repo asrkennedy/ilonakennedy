@@ -107,7 +107,7 @@ nav ul li {
 }
 
 .work_image_wrapper {
-  height: 640px;
+  height: auto;
   overflow: hidden;
 }
 
@@ -124,7 +124,7 @@ nav ul li {
 
 .info_bar {
   position: absolute;
-  top: 310px;
+  bottom: 0;
   width: 100%;
   display: table !important;
 }
