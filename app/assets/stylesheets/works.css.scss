@@ -150,7 +150,6 @@ nav ul li {
 
 .collection:before {
   content: '';
-  display: inline-block;
   height: 100%;
   vertical-align: middle;
   margin-right: -0.25em;
@@ -502,9 +501,21 @@ and (min-device-width : 480px) {
 
   // Recent works
 
+  .recent-works {
+    margin-top: 180px;
+  }
+
+  .work_image_wrapper {
+    height: auto;
+  }
+
   .info_bar {
     top: 0;
     bottom: auto;
+  }
+
+  .info_bar a {
+    height: 130px;
   }
 
   .up_arrow, .down_arrow {
