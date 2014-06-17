@@ -1,0 +1,15 @@
+<form accept-charset="UTF-8" action="/users/sign_in" class="new_user" id="new_user" method="post">
+  <h3>Sign In</h3>
+  <div style="margin:0;padding:0;display:inline">
+    <input name="utf8" type="hidden" value="✓">
+    <input name="authenticity_token" type="hidden" value="kGIJ1FVSIWOE0cGKfmYlPZx7y5hElVlnLe1E1j7Bd9o=">
+  </div>
+  <input autofocus="autofocus" placeholder="Email" id="user_email" name="user[email]" size="30" type="email" value="">
+
+  <input autocomplete="off" placeholder="Password" id="user_password" name="user[password]" size="30" type="password">
+
+  <div class="remember_me">
+    <input name="user[remember_me]" type="hidden" value="0"><input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1"> <label for="user_remember_me">Remember me</label>
+  </div>
+  <input name="commit" class="subscribe_button sign_in" type="submit" value="Sign in">
+</form>
