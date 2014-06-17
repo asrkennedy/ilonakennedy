@@ -426,8 +426,7 @@ li .handle {
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen
-and (min-device-width : 320px)
-and (min-device-width : 480px) {
+and (min-device-width : 320px) {
 
   nav {
     width: 100%;
@@ -517,9 +516,9 @@ and (min-device-width : 480px) {
     height: 130px;
   }
 
-  .up_arrow, .down_arrow {
-    display: none;
-  }
+  // .up_arrow, .down_arrow {
+  //   display: none;
+  // }
 
   // Bio
 
@@ -547,6 +546,47 @@ and (min-device-width : 480px) {
   .contact_text {
     width: auto;
   }
+
+  // Works Show
+
+  .works_wrapper {
+    margin-top: 180px;
+    min-width: 0;
+  }
+
+  .works_show {
+    float: none;
+    text-align: center;
+    display: inline-block;
+    margin: 10px 50px;
+  }
+
+  .works_show img {
+    width: 300px;
+    margin: auto;
+  }
+
+  .works_description {
+    text-align: left;
+    margin: 0 0 0 50px;
+    float: none;
+  }
+
+  .back_button, .purchase_button {
+    position: static;
+    float: left;
+    margin: 30px;
+  }
+
+  .purchase_button {
+    float: right;
+  }
+
+}
+
+// Iphones
+@media only screen and
+(min-device-width : 480px) {
 
 
 

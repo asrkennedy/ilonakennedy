@@ -17,13 +17,6 @@
       <%= @work.name %>
     </p>
 
-    <p>
-      <%= @work.date %>
-    </p>
-    <p>
-      <%= @work.category.name %>
-    </p>
-
     <p> from the
       <%= link_to @work.collection.name, collection_path(@work.collection) %>
       collection
