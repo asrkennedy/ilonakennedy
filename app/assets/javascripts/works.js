@@ -41,7 +41,7 @@ $(function(){
       }
       // set width of wrapper based on image widths
       imageWrapper.width(imageWrapperWidth);
-      $('.scrollable').css('min-width', imageLength);
+      // $('.scrollable').css('min-width', imageLength);
 
       if (imageWrapperWidth <= $('.scrollable').width()) {
         $(el).children('.collection_arrows.right').hide();
