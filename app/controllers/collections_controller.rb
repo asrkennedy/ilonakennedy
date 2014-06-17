@@ -13,7 +13,7 @@ class CollectionsController < ApplicationController
   # GET /collections/1
   # GET /collections/1.json
   def show
-    @collection = Collection.find(params[:id]).sort_by &:position
+    @collection = Collection.find(params[:id])
     @collection_works = @collection.works.sort_by &:position
 
     respond_to do |format|
