@@ -30,6 +30,10 @@ body, html {
 a {
   text-decoration: none;
   color: #4F5154;
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
 }
 
 a:hover,
@@ -168,6 +172,15 @@ nav ul li {
   z-index: 1;
   text-align: center;
   left: 0;
+  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+}
+
+.collection_name:hover,
+.collection_name:focus {
+    background-color: rgba(255,255,255,0.4);
 }
 
 .collection_arrows {
@@ -409,6 +422,125 @@ li .handle {
   font-size:  12px;
   cursor: move;
   color: #777;
+}
+
+// MEDIA QUERIES
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (min-device-width : 480px) {
+
+  nav {
+    width: 100%;
+    min-width: 0;
+  }
+
+  nav ul {
+    margin: 10px auto;
+    width: 100%;
+    padding: 0;
+  }
+
+  nav ul li:first-child {
+    margin-top: 28px;
+    background: #ffffff;
+  }
+
+  nav ul li {
+    display: block;
+    border-right: 0;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #EFEFEF;
+  }
+
+  nav ul li:nth-child(even) {
+    background-color: #efefef;
+  }
+
+   nav ul li:nth-child(even):hover {
+    background-color: #e7e7e7;
+    color: #efefef;
+   }
+
+  nav ul li:nth-child(odd):hover {
+    background-color: #f7f7f7;
+    color: #efefef;
+   }
+
+  .title {
+    position: fixed;
+    top: 0;
+    background-color: #efefef;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 10px;
+    margin: 0;
+  }
+
+  .past-works {
+    margin-top: 180px;
+  }
+
+  .collection.cf {
+    width: 300px;
+    min-width: 0;
+    margin: 20px auto;
+  }
+
+  // Recent works
+
+  .info_bar {
+    top: 0;
+    bottom: auto;
+  }
+
+  .up_arrow, .down_arrow {
+    display: none;
+  }
+
+  // Bio
+
+  .bio_wrapper {
+    margin-top: 180px;
+    text-align: center;
+  }
+
+  .bio_image {
+    margin-right: 0;
+  }
+
+  .biography {
+    text-align: left;
+    width: auto;
+    padding: 20px;
+  }
+
+// Contact
+
+.contact {
+  margin-top: 180px;
+}
+
+  .contact_text {
+    width: auto;
+  }
+
+
+
+
 }
 
 
