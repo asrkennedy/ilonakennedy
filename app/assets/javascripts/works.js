@@ -1,6 +1,7 @@
 $(function(){
   // For Recent Works
   var imageLength = $('.image_wrapper').children().first().width();
+  var collectionWidth = $('.collection.cf').width();
 
    function scrollBottom() {
     return $('.work_image_wrapper').scrollTop() + $('.work_image').height();
@@ -41,7 +42,7 @@ $(function(){
       }
       // set width of wrapper based on image widths
       imageWrapper.width(imageWrapperWidth);
-      // $('.scrollable').css('min-width', imageLength);
+      $('.scrollable').css('width', collectionWidth);
 
       if (imageWrapperWidth <= $('.scrollable').width()) {
         $(el).children('.collection_arrows.right').hide();
