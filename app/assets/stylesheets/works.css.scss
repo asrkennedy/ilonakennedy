@@ -462,18 +462,20 @@ and (min-device-width : 320px) {
     border-bottom: 1px solid #EFEFEF;
   }
 
+  nav ul li a:hover {
+    color: #2F3132;
+  }
+
   nav ul li:nth-child(even) {
     background-color: #efefef;
   }
 
    nav ul li:nth-child(even):hover {
     background-color: #e7e7e7;
-    color: #efefef;
    }
 
   nav ul li:nth-child(odd):hover {
-    background-color: #f7f7f7;
-    color: #efefef;
+    background-color: #efefef;
    }
 
   .title {
