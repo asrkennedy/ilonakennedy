@@ -1,7 +1,10 @@
 $(function(){
   // For Recent Works
-  var scrollBottom = $('.work_image_wrapper').scrollTop() + $('.work_image_wrapper').height();
   var imageLength = $('.image_wrapper').children().first().width();
+
+   function scrollBottom() {
+    return $('.work_image_wrapper').scrollTop() + $('.work_image').height();
+  }
 
   function scrollToLeft(){
     var scrollable = $($(this).parent().siblings('.scrollable')[0])
@@ -19,11 +22,11 @@ $(function(){
   }
 
   $('.down_arrow').on('click',function(){
-     $('html, body').animate({scrollTop: $(window).scrollTop() + scrollBottom}, 800);
+     $('html, body').animate({scrollTop: $(window).scrollTop() + scrollBottom()}, 800);
     });
 
   $('.up_arrow').on('click',function(){
-     $('html, body').animate({scrollTop: $(window).scrollTop() - scrollBottom}, 800);
+     $('html, body').animate({scrollTop: $(window).scrollTop() - scrollBottom()}, 800);
     });
 
   $('.up_arrow:first, .down_arrow:last').hide();
