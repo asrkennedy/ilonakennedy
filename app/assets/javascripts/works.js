@@ -3,9 +3,9 @@ $(function(){
   var imageLength = $('.image_wrapper').children().first().width();
   var collectionWidth = $('.collection.cf').width();
 
-   function scrollBottom() {
-    return $('.work_image_wrapper').scrollTop() + $('.work_image').height();
-  }
+   function scrollBottom(){
+   return $('.work_image_wrapper').scrollTop() + $('.work_image_wrapper').height();
+   }
 
   function scrollToLeft(){
     var scrollable = $($(this).parent().siblings('.scrollable')[0])
