@@ -1,15 +1,16 @@
 $(function(){
   // For Recent Works
   var scrollBottom = $('.work_image_wrapper').scrollTop() + $('.work_image_wrapper').height();
+  var imageLength = $('.image_wrapper').children().first().width();
 
   function scrollToLeft(){
     var scrollable = $($(this).parent().siblings('.scrollable')[0])
-    scrollable.animate({scrollLeft: '-=330'}, 800, 'linear', scrollToLeft);
+    scrollable.animate({scrollLeft: "-=" + imageLength}, 800, 'linear', scrollToLeft);
   }
 
   function scrollToRight(){
     var rightArrowWrapper = $(this).parent();
-    $(rightArrowWrapper.siblings('.scrollable')[0]).animate({scrollLeft: '+=330'}, 800, 'linear', scrollToRight);
+    $(rightArrowWrapper.siblings('.scrollable')[0]).animate({scrollLeft: "+=" + imageLength}, 800, 'linear', scrollToRight);
     rightArrowWrapper.siblings('.collection_arrows.left').css('visibility', 'visible').animate({opacity: '1'}, 500);
   }
 
@@ -27,18 +28,20 @@ $(function(){
 
   $('.up_arrow:first, .down_arrow:last').hide();
 
-  $('.collection').each(function(i, e) {
-    var imageWrapper = $(e).children('.scrollable').children('.image_wrapper')
-    var imageWidth = imageWrapper.children().width()
+  $('.collection').each(function(i, el) {
+    var imageWrapper = $(el).children('.scrollable').children('.image_wrapper')
     var numImages =  imageWrapper.children().length
-    var imageWrapperWidth = imageWidth*numImages
+    var imageWrapperWidth = imageLength*numImages
 
       if (imageWrapper.children().length < 1) {
-        $(e).remove();
+        $(el).remove();
       }
+      // set width of wrapper based on image widths
       imageWrapper.width(imageWrapperWidth);
+      $('.scrollable').css('min-width', imageLength);
+
       if (imageWrapperWidth <= $('.scrollable').width()) {
-        $(e).children('.collection_arrows.right').hide();
+        $(el).children('.collection_arrows.right').hide();
       }
   });
 
