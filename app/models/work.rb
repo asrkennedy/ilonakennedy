@@ -30,8 +30,12 @@ class Work < ActiveRecord::Base
     current_position = self.position
     current_category = self.category.name
     prev_work = Work.where("position < ?", current_position).order("position ASC").last
-    if prev_work.category.name == current_category
-      return prev_work
+    if prev_work
+      if prev_work.category.name == current_category
+        return prev_work
+      else
+        return false
+      end
     else
       return false
     end
