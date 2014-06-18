@@ -1,5 +1,5 @@
 class Bio < ActiveRecord::Base
-  attr_accessible :bio_image, :body
+  attr_accessible :bio_image, :body, :resume
 
   validate :limit_to_one, :on => :create
 

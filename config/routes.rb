@@ -3,8 +3,6 @@ IlonaKennedy::Application.routes.draw do
   mount Rich::Engine => '/rich', :as => 'rich'
 
   resources :bios
-
-
   resources :collections
   resources :categories
   resources :works
@@ -61,6 +59,7 @@ IlonaKennedy::Application.routes.draw do
   get 'past-works', :to => 'categories#index'
   get '/bio', to: "bios#index", as: :bio
   get '/contact', to: "pages#contact", as: :contact
+  # get '/admin/bio', to: "admin/bio/1/edit"
 
   # Sample resource route within a namespace:
   #   namespace :admin do

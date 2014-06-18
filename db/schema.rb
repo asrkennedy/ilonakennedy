@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140618114702) do
+ActiveRecord::Schema.define(:version => 20140618125102) do
 
   create_table "bios", :force => true do |t|
     t.text     "body"
     t.string   "bio_image"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.text     "resume"
   end
 
   create_table "categories", :force => true do |t|

@@ -112,8 +112,17 @@ RailsAdmin.config do |config|
     end
 
     config.model Bio do
+      list do
+        field :body
+        field :resume
+      end
       edit do
         field :body, :rich_editor do
+          config({
+            :insert_many => true
+          })
+        end
+        field :resume, :rich_editor do
           config({
             :insert_many => true
           })
