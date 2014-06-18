@@ -390,6 +390,10 @@ nav ul li {
   margin-bottom: 20px;
 }
 
+.biography p:first-child {
+  -webkit-margin-before: 0;
+}
+
 .signature {
   float: right;
 }

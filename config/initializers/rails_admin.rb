@@ -111,6 +111,24 @@ RailsAdmin.config do |config|
       visible false
     end
 
+    config.model Bio do
+      edit do
+        field :body, :text do
+          ckeditor do
+            true
+          end
+        end
+        field :bio_image, :rich_picker do
+          config({
+            :allowed_styles => [:original],
+            :view_mode => "list"
+          })
+        end
+      end
+  end
+
+
+
 
   # Now you probably need to tour the wiki a bit: https://github.com/sferik/rails_admin/wiki
   # Anyway, here is how RailsAdmin saw your application's models when you ran the initializer:

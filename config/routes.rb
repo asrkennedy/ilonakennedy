@@ -1,4 +1,10 @@
 IlonaKennedy::Application.routes.draw do
+
+  mount Rich::Engine => '/rich', :as => 'rich'
+
+  resources :bios
+
+
   resources :collections
   resources :categories
   resources :works
@@ -8,6 +14,8 @@ IlonaKennedy::Application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   resources :works, :collection => { :sort => :post }
+
+  mount Ckeditor::Engine => '/ckeditor'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -53,7 +61,7 @@ IlonaKennedy::Application.routes.draw do
 
   get 'recent-works', :to => 'works#index'
   get 'past-works', :to => 'categories#index'
-  get '/bio', to: "pages#bio", as: :bio
+  get '/bio', to: "bios#index", as: :bio
   get '/contact', to: "pages#contact", as: :contact
 
   # Sample resource route within a namespace:
