@@ -30,8 +30,7 @@ $(function(){
 
   function scrollToResume(){
     var bioWrapperHeight = $('.bio_wrapper').height();
-    console.log(bioWrapperHeight)
-    $('html, body').animate({scrollTop: bioWrapperHeight}, 800);
+    $('html, body').animate({scrollTop: bioWrapperHeight+40}, 800);
   }
 
   if (isMobile.matches) {

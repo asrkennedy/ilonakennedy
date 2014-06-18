@@ -374,7 +374,7 @@ nav ul li {
 .bio_wrapper {
   max-width: 940px;
   margin: auto;
-  padding: 0 40px;
+  padding: 0 40px 60px;
 }
 
 .bio_image {
@@ -465,7 +465,7 @@ div#mce-responses {
   font-family: 'Poiret One', cursive;
   font-size: 14px;
   color: #ffffff;
-  background: #c7c7c7;
+  background: #9f9f9f;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   border: none;
@@ -477,7 +477,7 @@ div#mce-responses {
 }
 
 .subscribe_button:hover {
-   background: #dfdfdf;
+   background: #b7b7b7;
   text-decoration: none;
 }
 
@@ -602,6 +602,7 @@ and (min-width : 320px) and (max-width: 766px) {
   .bio_wrapper {
     text-align: center;
     max-width: 1250px;
+    padding-bottom: 0;
   }
 
   .bio_image {
