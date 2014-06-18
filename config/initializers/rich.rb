@@ -16,7 +16,6 @@ if Object.const_defined?("Rich")
     # you are editing. To disable this:
     #   config.editor[:startupOutlineBlocks] = false
 
-
     # == Image styles
     #
     # Rich uses paperclip for image processing. You can
@@ -24,6 +23,7 @@ if Object.const_defined?("Rich")
     # can use the standard syntax allowed by paperclip.
     # See: https://github.com/thoughtbot/paperclip/wiki/Thumbnail-Generation
     #
+    # config.backend = :carrierwave
     # When you change these after uploading some files,
     # remember to re-generate your styles by running:
     #   rake rich:refresh_assets

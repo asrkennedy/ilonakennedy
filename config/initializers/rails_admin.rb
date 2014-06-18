@@ -113,17 +113,17 @@ RailsAdmin.config do |config|
 
     config.model Bio do
       edit do
-        field :body, :text do
-          ckeditor do
-            true
-          end
-        end
-        field :bio_image, :rich_picker do
+        field :body, :rich_editor do
           config({
-            :allowed_styles => [:original],
-            :view_mode => "list"
+            :insert_many => true
           })
         end
+        # field :bio_image, :rich_picker do
+        #   config({
+        #     :allowed_styles => [:original],
+        #     :view_mode => "list"
+        #   })
+        # end
       end
   end
 
