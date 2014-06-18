@@ -213,6 +213,10 @@ nav ul li {
     background-color: rgba(255,255,255,0.4);
 }
 
+.collection_name a {
+  color: #ffffff;
+}
+
 .collection_arrows {
   max-width: 40px;
   padding: 0;
@@ -550,6 +554,15 @@ and (min-width : 320px) and (max-width: 766px) {
 
   .info_bar a {
     height: 230px;
+  }
+
+  .collection_arrows.right {
+    right: 30px;
+  }
+
+  .right_arrow,
+  .left_arrow {
+    width: 60px;
   }
 
   // Bio
