@@ -11,13 +11,13 @@
     %nav.cf
       %ul
         %li
-          = link_to "Recent Works", "/recent-works"
+          = link_to "Recent Works", "/recent-works", :class=> cp(works_path)
         %li
-          = link_to "Past Works", "/past-works"
+          = link_to "Past Works", "/past-works", :class=> cp(categories_path)
         %li
-          = link_to "About the Artist", "/bio"
+          = link_to "About the Artist", "/bio", :class=> cp(bio_path)
         %li
-          = link_to "Contact", "/contact"
+          = link_to "Contact", "/contact", :class=> cp(contact_path)
       .title Ilona Kennedy
     = yield
 

@@ -459,19 +459,24 @@ div#mce-responses {
 @media only screen
 and (min-width : 320px) and (max-width: 766px) {
 
+  body {
+    margin-top: 0;
+  }
+
   nav {
     width: 100%;
     min-width: 0;
   }
 
   nav ul {
-    margin: 10px auto;
+    margin: 0px auto;
     width: 100%;
     padding: 0;
+    display: none;
   }
 
   nav ul li:first-child {
-    margin-top: 28px;
+    margin-top: 38px;
     background: #ffffff;
   }
 
@@ -518,10 +523,7 @@ and (min-width : 320px) and (max-width: 766px) {
     text-align: center;
     padding: 10px 0 10px;
     margin: 0;
-  }
-
-  .past-works {
-    margin-top: 180px;
+    cursor: pointer;
   }
 
   .collection.cf {
@@ -531,10 +533,6 @@ and (min-width : 320px) and (max-width: 766px) {
   }
 
   // Recent works
-
-  .recent-works {
-    margin-top: 174px;
-  }
 
   .scrollable {
     min-width: 300px;
@@ -556,7 +554,6 @@ and (min-width : 320px) and (max-width: 766px) {
   // Bio
 
   .bio_wrapper {
-    margin-top: 180px;
     text-align: center;
     max-width: 1250px;
   }
@@ -574,7 +571,6 @@ and (min-width : 320px) and (max-width: 766px) {
 // Contact
 
   .contact {
-    margin-top: 180px;
     padding: 40px;
   }
 
@@ -585,7 +581,6 @@ and (min-width : 320px) and (max-width: 766px) {
   // Works Show
 
   .works_wrapper {
-    margin-top: 180px;
     min-width: 0;
   }
 
