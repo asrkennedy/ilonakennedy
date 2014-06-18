@@ -136,6 +136,10 @@ RailsAdmin.config do |config|
       end
   end
 
+  config.model Rich::RichFile do
+      visible false
+  end
+
 
 
 
