@@ -85,6 +85,12 @@ nav {
   margin: 20px;
 }
 
+.title.down {
+  text-align: right;
+  width: 20px;
+  display: none;
+}
+
 nav ul {
   display: inline-block;
   list-style: none;
@@ -533,6 +539,10 @@ and (min-width : 320px) and (max-width: 766px) {
     cursor: pointer;
   }
 
+  .title.down {
+    display: inline-block;
+  }
+
   .collection.cf {
     width: 300px;
     min-width: 0;
@@ -700,6 +710,16 @@ and (min-width : 768px) and (max-width: 1023px) {
 
   .past_work_image {
     width: 245px;
+  }
+
+  .back_button,
+  .purchase_button {
+    right: 0;
+    margin: 30px;
+  }
+
+  .purchase_button {
+    right: 90px;
   }
 }
 
