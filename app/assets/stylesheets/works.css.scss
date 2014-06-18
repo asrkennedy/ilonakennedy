@@ -374,7 +374,7 @@ nav ul li {
 .bio_wrapper {
   max-width: 940px;
   margin: auto;
-  padding: 40px;
+  padding: 0 40px;
 }
 
 .bio_image {
@@ -397,6 +397,21 @@ nav ul li {
 .about_contact {
   display: inline-block;
   width: 100px;
+}
+
+.resume_button {
+  text-align: center;
+  width: 100px;
+  cursor: pointer;
+}
+
+.resume_wrapper {
+  padding: 0 40px;
+}
+
+.exhibitions {
+  -webkit-margin-before: -.5em;
+  padding-left: 10px;
 }
 
 // CONTACT
@@ -450,7 +465,7 @@ div#mce-responses {
   font-family: 'Poiret One', cursive;
   font-size: 14px;
   color: #ffffff;
-  background: #818385;
+  background: #c7c7c7;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   border: none;
@@ -462,7 +477,7 @@ div#mce-responses {
 }
 
 .subscribe_button:hover {
-   background: #c7c7c7;
+   background: #dfdfdf;
   text-decoration: none;
 }
 
@@ -669,6 +684,10 @@ and (min-width : 320px) and (max-width: 766px) {
     margin-top: 10px;
   }
 
+  .subscribe_button.resume_button {
+    display: none;
+  }
+
 }
 
 // Tablets
@@ -697,7 +716,7 @@ and (min-width : 768px) and (max-width: 1023px) {
 @media only screen and (min-width: 768px) and (max-width: 940px) {
 
   .biography {
-    width: 500px;
+    width: 450px;
   }
 }
 
@@ -721,6 +740,7 @@ and (min-width : 768px) and (max-width: 1023px) {
   .purchase_button {
     right: 90px;
   }
+
 }
 
 
