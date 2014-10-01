@@ -107,6 +107,7 @@ nav {
 .title:focus {
   border: none;
   color:   #AC126E;
+  padding-bottom: 0;
 }
 
 .title.down {
@@ -351,6 +352,7 @@ nav ul li {
   margin: 40px;
   width: 55%;
   display: table;
+  empty-cells: show;
 }
 
 .works_title {
@@ -408,6 +410,12 @@ nav ul li {
 
 .next_button {
   right: 0;
+}
+
+.spacer {
+  width: 38px;
+  height: 100%;
+  display: table-cell;
 }
 
 // COLLECTIONS
@@ -585,6 +593,10 @@ and (min-width : 320px) and (max-width: 766px) {
     min-width: 0;
   }
 
+  nav .current {
+    border: 2px solid #777777;
+  }
+
   nav ul {
     margin: 0px auto;
     width: 100%;
@@ -643,6 +655,11 @@ and (min-width : 320px) and (max-width: 766px) {
     cursor: pointer;
   }
 
+  .title:hover,
+  .title:focus {
+    padding: 10px 0;
+  }
+
   .title.down {
     display: inline-block;
   }
@@ -650,7 +667,7 @@ and (min-width : 320px) and (max-width: 766px) {
   .collection.cf {
     width: 300px;
     min-width: 0;
-    margin: 20px auto;
+    margin: 60px auto;
   }
 
   // Recent works
@@ -692,6 +709,7 @@ and (min-width : 320px) and (max-width: 766px) {
     text-align: center;
     max-width: 1250px;
     padding-bottom: 0;
+    margin-top: 40px;
   }
 
   .bio_image {
@@ -702,6 +720,10 @@ and (min-width : 320px) and (max-width: 766px) {
     text-align: left;
     width: auto;
     padding: 20px;
+  }
+
+  .resume_button {
+    display: none;
   }
 
 // Contact
@@ -720,7 +742,7 @@ and (min-width : 320px) and (max-width: 766px) {
     float: none;
     text-align: center;
     margin: 10px auto;
-    width: 300px
+    width: auto;
   }
 
   .works_show img {
@@ -730,18 +752,17 @@ and (min-width : 320px) and (max-width: 766px) {
 
   .works_description {
     text-align: left;
-    margin: 0 0 0 50px;
+    margin: 0 auto;
     float: none;
-  }
-
-  .back_button, .purchase_button {
-    position: static;
-    float: left;
-    margin: 30px;
+    max-width: 65%;
   }
 
   .purchase_button {
-    float: right;
+    position: static;
+    text-align: center;
+    margin: 30px auto;
+    float: none;
+    display: block;
   }
 
   .next_prev_buttons {
@@ -765,7 +786,10 @@ and (min-width : 320px) and (max-width: 766px) {
     margin-right: 0;
   }
 
-  .works_show,
+  .works_show {
+    width: auto;
+  }
+
   .works_show img {
     width: 400px
   }
@@ -780,6 +804,15 @@ and (min-width : 320px) and (max-width: 766px) {
 
   .subscribe_button.resume_button {
     display: none;
+  }
+
+  .works_description {
+    max-width: 50%;
+    margin: auto;
+  }
+
+  .purchase_button {
+    max-width: 80%;
   }
 
 }
@@ -805,13 +838,52 @@ and (min-width : 768px) and (max-width: 1023px) {
     min-width: 700px;
   }
 
+  nav a {
+    font-size: 16px;
+  }
+
+  nav ul li {
+    margin-right: 10px;
+    padding-right: 15px;
+  }
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 940px) {
 
+  body {
+    margin: 0;
+  }
+
   .biography {
     width: 450px;
   }
+
+  nav {
+    display: block;
+    margin: auto;
+    position: static;
+    text-align: center;
+  }
+
+  nav ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .title {
+    float: none;
+    text-align: center;
+    display: block;
+    margin: 40px 0 20px 0;
+  }
+
+  .contact_text {
+    width: auto;
+  }
+
+
+
 }
 
   @media only screen and (min-width: 1024px) and (max-width: 1249px) {

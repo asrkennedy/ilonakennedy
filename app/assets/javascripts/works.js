@@ -43,6 +43,9 @@ $(function(){
       $('.title').on('click',function(){
         $('nav ul').slideToggle();
       })
+
+      // hides the bio name on bio page for mobile
+      $('.bio_name').hide();
     } else {
         // accounts for the fixed nav 57px at top
     $('.work_image_wrapper').css('max-height', $(window).height()-58)

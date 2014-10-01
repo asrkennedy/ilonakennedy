@@ -1,5 +1,6 @@
 <div class="bio_wrapper cf">
-  <h1>Ilona Kennedy</h1>
+
+  <h1 class="bio_name">Ilona Kennedy</h1>
 
     <%= image_tag "https://s3.amazonaws.com/ilonakennedy/bio.jpg", :class=>"bio_image"%>
 
@@ -13,6 +14,7 @@
   </div>
   </div>
   <div class="resume_wrapper">
+    <hr>
     <% @bios.each do |b| %>
       <%= raw(b.resume) %>
     <% end %>

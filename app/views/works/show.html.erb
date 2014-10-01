@@ -3,10 +3,14 @@
   <div class="works_show cf">
     <% if @work.get_prev_work %>
         <%= link_to '⟨', @work.get_prev_work, :class=> "prev_button" %>
+    <% else %>
+        <div class="spacer"></div>
     <% end %>
     <%= image_tag @work.works_image.url %>
     <% if @work.get_next_work %>
         <%= link_to '⟩', @work.get_next_work, :class=> "next_button"  %>
+    <% else %>
+        <div class="spacer"></div>
     <% end %>
   </div>
 
