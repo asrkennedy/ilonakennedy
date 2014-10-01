@@ -17,6 +17,10 @@
     clear: both;
 }
 
+body {
+  font-size: 20px;
+}
+
 #new_user {
   width: 200px;
   margin: 180px auto;
@@ -59,16 +63,19 @@ body, html {
 
 a {
   text-decoration: none;
-  color: #4F5154;
-  transition: all 0.5s linear;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
+  color:  #000;
+  transition: color 0.5s linear;
+  -webkit-transition: color 0.5s linear;
+  -moz-transition: color 0.5s linear;
+  -o-transition: color 0.5s linear;
+  font-weight: 900;
 }
 
-a:hover,
-a:focus {
+nav a:hover,
+nav a:focus {
   color: #8F8F8F;
+  border-bottom: 2px solid #8F8F8F;
+  padding-bottom: 10px;
 }
 
 nav {
@@ -82,13 +89,22 @@ nav {
 
 .title {
   float: right;
-  margin: 20px;
+  margin: 20px 40px 0 0;
+  font-size: 30px;
+  color: #000;
+}
+
+.title:hover,
+.title:focus {
+  border: none;
+  color:   #AC126E;
 }
 
 .title.down {
   text-align: right;
   width: 20px;
   display: none;
+  margin-left: 10px;
 }
 
 nav ul {
@@ -99,7 +115,7 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin-right: 20px;
-  border-right: 1px solid #4F5154;
+  border-right: 1px solid #000;
   padding-right: 20px;
 }
 
@@ -138,13 +154,13 @@ nav ul li {
 .info_bar a:hover,
 .info_bar a:focus {
   background-color: rgba(255,255,255,0.4);
-  color: #FFFFFF;
+  color: #000;
  }
 
 .info_bar a {
   height: 330px;
   color: #F7F5F2;
-  background-color: rgba(255,255,255,0.2);
+  // background-color: rgba(255,255,255,0.2);
   display: table-cell;
   vertical-align: middle;
   width: 100%;
@@ -178,7 +194,7 @@ nav ul li {
 
 .collection {
   margin: 20px auto;
-  background-color: #999999;
+  background-color: #EFEFEF;
   overflow: hidden;
   min-width: 1116px;
   position: relative;
@@ -201,13 +217,14 @@ nav ul li {
 
 .collection_name {
   width: 100%;
-  background: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.4);
   height: 50px;
   position: absolute;
   bottom: 0;
   z-index: 1;
   text-align: center;
   left: 0;
+  display: table;
   transition: all 0.4s linear;
   -webkit-transition: all 0.4s linear;
   -moz-transition: all 0.4s linear;
@@ -216,11 +233,18 @@ nav ul li {
 
 .collection_name:hover,
 .collection_name:focus {
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255,255,255,0.6);
 }
 
 .collection_name a {
-  color: #000000;
+  color: #FFF;
+  width: 100%;
+  display: table-cell;
+}
+
+.collection_name a:hover,
+.collection_name a:focus {
+  color: #000;
 }
 
 .collection_arrows {
@@ -283,6 +307,7 @@ nav ul li {
   // display: inline-block;
   width: 300px;
   float: left;
+  margin-right: 2px;
 }
 
 .image_wrapper a {
@@ -297,31 +322,57 @@ nav ul li {
   float: right;
   margin: 40px;
   text-align: right;
-  margin-right: 100px;
+  max-width: 25%;
+}
+
+.description {
+  font-size: 18px;
 }
 
 .works_show {
   float: left;
   margin: 40px;
+  width: 55%;
+  display: table;
+}
+
+.works_title {
+  font-size: 24px;
+  margin-top: 0;
 }
 
 .works_show img {
-  width: 480px;
+  width: 90%;
+  display: table-cell;
+  margin: auto;
 }
 
-.back_button, .purchase_button{
-  margin: 60px;
+.works_collection_name {
+  color: #AC126E;
+  transition: color 0.3s linear;
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+}
+
+.works_collection_name:hover,
+.works_collection_name:focus {
+  color: #7F0D52;
+  border-bottom: 1px solid #7F0D52;
+  padding-bottom: 5px;
+}
+
+.purchase_button{
   font-size: 24px;
   border-radius: 3px;
   padding: 5px 10px;
   background: #cccccc;
-  position: absolute;
-  bottom: 0;
-  right: 40px;
   transition: background 0.3s linear;
   -webkit-transition: background 0.3s linear;
   -moz-transition: background 0.3s linear;
   -o-transition: background 0.3s linear;
+  float: right;
+  margin-top: 10px;
 }
 
 .back_button:hover,
@@ -331,20 +382,15 @@ nav ul li {
   background: #aaaaaa;
 }
 
-.purchase_button {
-  right: 120px;
-}
-
-.next_prev_buttons {
-  width: 100%;
-}
-
-.prev_button {
-  float: left;
+.prev_button, .next_button {
+  font-size: 100px;
+  color: #CCC;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .next_button {
-  float: right;
+  right: 0;
 }
 
 // COLLECTIONS
@@ -363,6 +409,11 @@ nav ul li {
 .collection_works_name {
   width: 280px;
   margin: 10px;
+}
+
+.collection_works_name a:hover,
+.collection_works_name a:focus {
+    color: #AC126E;
 }
 
 .collection_works_image {
@@ -405,8 +456,13 @@ nav ul li {
 
 .resume_button {
   text-align: center;
-  width: 100px;
+  width: 160px;
   cursor: pointer;
+}
+
+.resume_down {
+  float: right;
+  font-size: 12px;
 }
 
 .resume_wrapper {
@@ -505,7 +561,7 @@ and (min-width : 320px) and (max-width: 766px) {
   nav ul {
     margin: 0px auto;
     width: 100%;
-    padding: 0;
+    padding: 16px 0 0 0;
     display: none;
   }
 
@@ -687,7 +743,7 @@ and (min-width : 320px) and (max-width: 766px) {
     margin-left: 40px;
   }
 
-   .back_button, .purchase_button {
+   .back_button {
     margin-top: 10px;
   }
 
@@ -738,14 +794,9 @@ and (min-width : 768px) and (max-width: 1023px) {
     width: 245px;
   }
 
-  .back_button,
-  .purchase_button {
+  .back_button {
     right: 0;
     margin: 30px;
-  }
-
-  .purchase_button {
-    right: 90px;
   }
 
 }

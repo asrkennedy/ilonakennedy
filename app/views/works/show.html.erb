@@ -1,39 +1,42 @@
 <p id="notice"><%= notice %></p>
 <div class="works_wrapper cf">
   <div class="works_show cf">
+    <% if @work.get_prev_work %>
+        <%= link_to '⟨', @work.get_prev_work, :class=> "prev_button" %>
+    <% end %>
     <%= image_tag @work.works_image.url %>
-    <div class="next_prev_buttons">
-      <% if @work.get_prev_work %>
-        <%= link_to 'Previous', @work.get_prev_work, :class=> "prev_button" %>
-      <% end %>
-        <% if @work.get_next_work %>
-        <%= link_to 'Next', @work.get_next_work, :class=> "next_button"  %>
-      <% end %>
-    </div>
+    <% if @work.get_next_work %>
+        <%= link_to '⟩', @work.get_next_work, :class=> "next_button"  %>
+    <% end %>
   </div>
 
   <div class="works_description">
-    <p>
+    <p class="works_title">
       <%= @work.name %>
     </p>
 
     <p> from the
-      <%= link_to @work.collection.name, collection_path(@work.collection) %>
+      <%= link_to @work.collection.name, collection_path(@work.collection), :class=> "works_collection_name" %>
       collection
     </p>
-
+    <p class="description">
+      <%= @work.description %>
+    </p>
+      <p>
+      <%= @work.dimensions %>
+    </p>
     <p>
       <%= @work.price %>
     </p>
+
+
+
+
+
+    <%= link_to 'Purchase', works_path, :class=>"purchase_button" %>
   </div>
 </div>
 
 
-<% if @work.category.name == "Past Works" %>
-  <%= link_to 'Back', '/past-works', :class=>"back_button" %>
-<% else %>
-  <%= link_to 'Back',  works_path, :class=>"back_button" %>
-<% end %>
-  <%= link_to 'Purchase', works_path, :class=>"purchase_button" %>
 
 
