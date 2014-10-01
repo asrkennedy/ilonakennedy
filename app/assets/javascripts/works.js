@@ -14,14 +14,12 @@ $(function(){
 
   function scrollToLeft(){
     var scrollable = $($(this).parent().siblings('.scrollable')[0])
-    var imageNumber = scrollable.children().first().children().length;
-    scrollable.animate({scrollLeft: "-=" + (imageLength + (2*imageNumber))}, 800, 'linear', scrollToLeft);
+    scrollable.animate({scrollLeft: "-=" + imageLength}, 800, 'linear', scrollToLeft);
   }
 
   function scrollToRight(){
     var rightArrowWrapper = $(this).parent();
-    var imageNumber = rightArrowWrapper.siblings('.scrollable').children().first().children().length;
-    $(rightArrowWrapper.siblings('.scrollable')[0]).animate({scrollLeft: "+=" + (imageLength + (2*imageNumber))}, 800, 'linear', scrollToRight);
+    $(rightArrowWrapper.siblings('.scrollable')[0]).animate({scrollLeft: "+=" + imageLength}, 800, 'linear', scrollToRight);
     rightArrowWrapper.siblings('.collection_arrows.left').css('visibility', 'visible').animate({opacity: '1'}, 500);
   }
 
