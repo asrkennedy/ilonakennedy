@@ -204,7 +204,7 @@ nav ul li {
 
 .collection {
   margin: 20px auto;
-  background-color: #EFEFEF;
+  background-color: #777;
   overflow: hidden;
   min-width: 1116px;
   position: relative;
@@ -433,7 +433,7 @@ nav ul li {
 .collection_works_image,
 .collection_works_name {
   width: 280px;
-  margin: 10px;
+  margin: 5px;
 }
 
 .collection_works_name a:hover,
@@ -494,6 +494,7 @@ nav ul li {
   padding: 0 40px;
   max-width: 940px;
   margin: auto;
+  margin-bottom: 40px;
 }
 
 .exhibitions {
@@ -527,10 +528,6 @@ nav ul li {
   position: relative;
   margin-top: 10px;
 }
-
-// .signup_prompt {
-//   margin-top: 40px;
-// }
 
 div.mc-field-group, .clear {
   display: inline-block;
@@ -736,6 +733,7 @@ and (min-width : 320px) and (max-width: 766px) {
 
   .works_wrapper {
     min-width: 0;
+    margin-top: 40px;
   }
 
   .works_show {
@@ -767,6 +765,21 @@ and (min-width : 320px) and (max-width: 766px) {
 
   .next_prev_buttons {
     font-size: 20px;
+  }
+
+  //Collections
+
+  .collection_work_wrappers,
+  .collection_works_name,
+  .collection_works_image {
+    width: 100%;
+    margin: 0;
+  }
+
+  .collection_works_name a {
+    text-align: center;
+    display: block;
+    padding-bottom: 20px;
   }
 
 }
@@ -813,6 +826,15 @@ and (min-width : 320px) and (max-width: 766px) {
 
   .purchase_button {
     max-width: 80%;
+  }
+
+  .collection_work_wrappers, {
+    width: 44%;
+    margin: 10px;
+  }
+
+  .collection_works_image {
+    width: 100%;
   }
 
 }
@@ -880,6 +902,15 @@ and (min-width : 768px) and (max-width: 1023px) {
 
   .contact_text {
     width: auto;
+  }
+
+  .collection_work_wrappers, {
+    width: 46%;
+    margin: 10px;
+  }
+
+  .collection_works_image {
+    width: 100%;
   }
 
 

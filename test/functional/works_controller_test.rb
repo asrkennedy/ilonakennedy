@@ -18,7 +18,7 @@ class WorksControllerTest < ActionController::TestCase
 
   test "should create work" do
     assert_difference('Work.count') do
-      post :create, work: { category: @work.category, date: @work.date, name: @work.name, price: @work.price, series: @work.series }
+      post :create, work: { category: @work.category, year: @work.year, name: @work.name, price: @work.price, series: @work.series }
     end
 
     assert_redirected_to work_path(assigns(:work))
@@ -35,7 +35,7 @@ class WorksControllerTest < ActionController::TestCase
   end
 
   test "should update work" do
-    put :update, id: @work, work: { category: @work.category, date: @work.date, name: @work.name, price: @work.price, series: @work.series }
+    put :update, id: @work, work: { category: @work.category, year: @work.year, name: @work.name, price: @work.price, series: @work.series }
     assert_redirected_to work_path(assigns(:work))
   end
 

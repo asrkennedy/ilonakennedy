@@ -21,7 +21,8 @@
 
     <p> from the
       <%= link_to @work.collection.name, collection_path(@work.collection), :class=> "works_collection_name" %>
-      collection
+      collection<br>
+      <%= @work.year %>
     </p>
     <p class="description">
       <%= @work.description %>

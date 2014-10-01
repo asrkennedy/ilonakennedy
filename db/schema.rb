@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141001160438) do
+ActiveRecord::Schema.define(:version => 20141001203554) do
 
   create_table "bios", :force => true do |t|
     t.text     "body"
@@ -33,12 +33,12 @@ ActiveRecord::Schema.define(:version => 20141001160438) do
 
   create_table "collections", :force => true do |t|
     t.string   "name"
-    t.date     "date"
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "ancestry"
     t.integer  "position"
+    t.integer  "year"
   end
 
   add_index "collections", ["ancestry"], :name => "index_collections_on_ancestry"
@@ -93,13 +93,13 @@ ActiveRecord::Schema.define(:version => 20141001160438) do
     t.integer  "category_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
-    t.date     "date"
     t.string   "works_image"
     t.integer  "collection_id"
     t.string   "ancestry"
     t.integer  "position"
     t.string   "dimensions"
     t.text     "description"
+    t.integer  "year"
   end
 
   add_index "works", ["ancestry"], :name => "index_works_on_ancestry"

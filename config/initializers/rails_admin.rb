@@ -17,7 +17,6 @@ RailsAdmin.config do |config|
     show
     edit
     delete
-    history_show
     show_in_app
 
     # Add the nestable action for configured models
@@ -84,7 +83,7 @@ RailsAdmin.config do |config|
       list do
         field :position
         field :name
-        field :date
+        field :year
         field :description
         field :works
         sort_by :position
