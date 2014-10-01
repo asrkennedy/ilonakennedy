@@ -11,13 +11,13 @@
     %nav.cf
       %ul
         %li
-          = link_to "Current Work", "/recent-works", :class=> cp(works_path)
+          = link_to "Current Work", "/recent-works", :class=> cp("/recent-works")
         %li
-          = link_to "Retrospective Work", "/past-works", :class=> cp(categories_path)
+          = link_to "Retrospective Work", "/past-works", :class=> cp("/past-works")
         %li
-          = link_to "About the Artist", "/bio", :class=> cp(bio_path)
+          = link_to "About the Artist", "/bio", :class=> cp("/bio")
         %li
-          = link_to "Contact", "/contact", :class=> cp(contact_path)
+          = link_to "Contact", "/contact", :class=> cp("/contact")
       = link_to "Ilona Kennedy", "/", :class=> "title"
       .title.down &dtri;
     = yield
