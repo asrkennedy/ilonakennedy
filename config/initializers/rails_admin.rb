@@ -65,46 +65,35 @@ RailsAdmin.config do |config|
   #   - Models are reloaded at each request in development mode (when modified), which may smooth your RailsAdmin development workflow.
 
   config.model Work do
-      nestable_tree({
-        parent: Collection,
-        position_field: :position,
-        max_depth: 3
-      })
-    list do
-        field :name
-        field :price
-        field :collection
-        field :works_image
-        sort_by :collection
-      end
-    end
+    parent Collection
+     list do
+       field :name
+       field :price
+       field :collection
+       field :works_image
+       sort_by :collection
+     end
+     nestable_list true
+   end
 
-    config.model Collection do
-      list do
-        field :position
-        field :name
-        field :year
-        field :description
-        field :works
-        sort_by :position
-      end
-      nestable_tree({
-        children: Work,
-        position_field: :position,
-        max_depth: 3
-      })
-    end
+     config.model Collection do
+       list do
+         field :position
+         field :name
+         field :year
+         field :description
+         field :works
+         sort_by :position
+       end
+       nestable_list true
+     end
 
-    config.model Category do
-      list do
-        field :name
-        sort_by :position
-      end
-      nestable_tree({
-        position_field: :position,
-        max_depth: 3
-        })
-    end
+     config.model Category do
+       list do
+         field :name
+         sort_by :position
+       end
+     end
 
     config.model User do
       visible false
