@@ -7,8 +7,6 @@ $(function(){
    function scrollBottom(){
     // accounts for the fixed nav 57px at top
     var amountScrolled = $('.work_image_wrapper').scrollTop() + $(window).height() -57;
-    // if mobile
-    // var amountScrolled = $('.work_image_wrapper').scrollTop() + $('.work_image_wrapper').height()
    return amountScrolled
    }
 
@@ -32,35 +30,7 @@ $(function(){
     $('html, body').animate({scrollTop: bioWrapperHeight+40}, 800);
   }
 
-  if (isMobile.matches) {
-      $('.down_arrow').on('click',function(){
-        $('html, body').animate({scrollTop: $(window).scrollTop() +  $('.work_image_wrapper').height()}, 800);
-      });
-      $('.up_arrow').on('click',function(){
-       $('html, body').animate({scrollTop: $(window).scrollTop() - $('.work_image_wrapper').height()}, 800);
-      });
-
-      $('.title').on('click',function(){
-        $('nav ul').slideToggle();
-      })
-
-      // hides the bio name on bio page for mobile
-      $('.bio_name').hide();
-    } else {
-        // accounts for the fixed nav 57px at top
-    $('.work_image_wrapper').css('max-height', $(window).height()-58)
-
-    $('.down_arrow').on('click',function(){
-       $('html, body').animate({scrollTop: $(window).scrollTop() + scrollBottom()}, 800);
-      });
-
-    $('.up_arrow').on('click',function(){
-       $('html, body').animate({scrollTop: $(window).scrollTop() - scrollBottom()}, 800);
-      });
-    }
-
-  $('.up_arrow:first, .down_arrow:last').hide();
-
+// Makes collections scroll to image widths
   $('.collection').each(function(i, el) {
     var imageWrapper = $(el).children('.scrollable').children('.image_wrapper')
     var numImages =  imageWrapper.children().length
@@ -78,9 +48,37 @@ $(function(){
       }
   });
 
+// Interactive page elements
+  $('.up_arrow:first, .down_arrow:last').hide();
   $(".right_arrow").click(scrollToRight);
   $(".left_arrow").click(scrollToLeft);
-
   $('.resume_button').click(scrollToResume);
+
+  // Only on mobile
+  if (isMobile.matches) {
+    $('.down_arrow').on('click',function(){
+      $('html, body').animate({scrollTop: $(window).scrollTop() +  $('.work_image_wrapper').height()}, 800);
+    });
+    $('.up_arrow').on('click',function(){
+     $('html, body').animate({scrollTop: $(window).scrollTop() - $('.work_image_wrapper').height()}, 800);
+    });
+
+    $('.title').on('click',function(){
+      $('nav ul').slideToggle();
+    })
+
+    $('.bio_name').hide();
+  } else {
+    // accounts for the fixed nav 57px at top
+    $('.work_image_wrapper').css('max-height', $(window).height()-58)
+
+    $('.down_arrow').on('click',function(){
+       $('html, body').animate({scrollTop: $(window).scrollTop() + scrollBottom()}, 800);
+      });
+
+    $('.up_arrow').on('click',function(){
+       $('html, body').animate({scrollTop: $(window).scrollTop() - scrollBottom()}, 800);
+      });
+  }
 
 });
