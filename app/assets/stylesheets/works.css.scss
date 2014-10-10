@@ -235,10 +235,6 @@ nav ul li {
   text-align: center;
   left: 0;
   display: table;
-  transition: all 0.4s linear;
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
 }
 
 .collection_name:hover,
@@ -250,6 +246,10 @@ nav ul li {
   color: #FFF;
   width: 100%;
   display: table-cell;
+    transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
 }
 
 .collection_name a:hover,
