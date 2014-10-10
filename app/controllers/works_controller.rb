@@ -2,7 +2,7 @@ class WorksController < ApplicationController
   # GET /works
   # GET /works.json
   def index
-    @works = Work.all(:order => "position DESC")
+    @works = Work.all(:order => "position ASC")
 
     respond_to do |format|
       format.html # index.html.erb
