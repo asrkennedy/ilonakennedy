@@ -4,30 +4,25 @@ $(function(){
   var collectionWidth = $('.collection.cf').width();
   var isMobile = window.matchMedia("only screen and (max-width: 760px)");
 
-   function scrollBottom(){
-    // accounts for the fixed nav 57px at top
-    var amountScrolled = $('.work_image_wrapper').scrollTop() + $(window).height() -57;
-   return amountScrolled
-   }
-
-  function scrollToLeft(){
-    var scrollable = $($(this).parent().siblings('.scrollable')[0])
-    scrollable.animate({scrollLeft: "-=" + imageLength}, 800, 'linear', scrollToLeft);
-  }
-
-  function scrollToRight(){
-    var rightArrowWrapper = $(this).parent();
-    $(rightArrowWrapper.siblings('.scrollable')[0]).animate({scrollLeft: "+=" + imageLength}, 800, 'linear', scrollToRight);
+  var move = {
+    scrollToRight: function() {
+       var rightArrowWrapper = $(this).parent();
+    $(rightArrowWrapper.siblings('.scrollable')[0]).animate({scrollLeft: "+=" + imageLength}, 800, 'linear', move.scrollToRight);
     rightArrowWrapper.siblings('.collection_arrows.left').css('visibility', 'visible').animate({opacity: '1'}, 500);
-  }
-
-  function stop(){
-    $('.scrollable').stop();
-  }
-
-  function scrollToResume(){
-    var bioWrapperHeight = $('.bio_wrapper').height();
-    $('html, body').animate({scrollTop: bioWrapperHeight+40}, 800);
+    },
+    scrollToLeft: function() {
+      var scrollable = $($(this).parent().siblings('.scrollable')[0])
+      scrollable.animate({scrollLeft: "-=" + imageLength}, 800, 'linear', move.scrollToLeft);
+    },
+    scrollBottom: function() {
+      // accounts for the fixed nav 57px at top
+      var amountScrolled = $('.work_image_wrapper').scrollTop() + $(window).height() -57;
+      return amountScrolled
+    },
+    scrollToResume: function() {
+      var bioWrapperHeight = $('.bio_wrapper').height();
+      $('html, body').animate({scrollTop: bioWrapperHeight+40}, 800);
+    }
   }
 
 // Makes collections scroll to image widths
@@ -50,9 +45,9 @@ $(function(){
 
 // Interactive page elements
   $('.up_arrow:first, .down_arrow:last').hide();
-  $(".right_arrow").click(scrollToRight);
-  $(".left_arrow").click(scrollToLeft);
-  $('.resume_button').click(scrollToResume);
+  $(".right_arrow").click(move.scrollToRight);
+  $(".left_arrow").click(move.scrollToLeft);
+  $('.resume_button').click(move.scrollToResume);
 
   // Only on mobile
   if (isMobile.matches) {
@@ -73,11 +68,11 @@ $(function(){
     $('.work_image_wrapper').css('max-height', $(window).height()-58)
 
     $('.down_arrow').on('click',function(){
-       $('html, body').animate({scrollTop: $(window).scrollTop() + scrollBottom()}, 800);
+       $('html, body').animate({scrollTop: $(window).scrollTop() + move.scrollBottom()}, 800);
       });
 
     $('.up_arrow').on('click',function(){
-       $('html, body').animate({scrollTop: $(window).scrollTop() - scrollBottom()}, 800);
+       $('html, body').animate({scrollTop: $(window).scrollTop() - move.scrollBottom()}, 800);
       });
   }
 
