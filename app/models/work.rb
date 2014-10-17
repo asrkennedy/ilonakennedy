@@ -17,22 +17,24 @@ class Work < ActiveRecord::Base
 
   def get_next_work
     current_position = self.position
-    current_category = self.category.name
+    current_collection = self.collection.name
     next_work = Work.where("position > ?", current_position).order("position ASC").first
-    if next_work && next_work.category.name == current_category
+    if next_work && next_work.collection.name == current_collection
       return next_work
     else
+      binding.pry
       return false
     end
   end
 
   def get_prev_work
     current_position = self.position
-    current_category = self.category.name
+    current_collection = self.collection.name
     prev_work = Work.where("position < ?", current_position).order("position ASC").last
-    if prev_work && prev_work.category.name == current_category
+    if prev_work && prev_work.collection.name == current_collection
       return prev_work
     else
+      binding.pry
       return false
     end
   end
